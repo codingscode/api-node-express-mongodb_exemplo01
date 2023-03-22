@@ -21,6 +21,8 @@ na pasta backend:
 
 
 
+ver http://localhost:5000/api
+
 
 
 
