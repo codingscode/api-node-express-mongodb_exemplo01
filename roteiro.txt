@@ -29,6 +29,46 @@ https://www.mongodb.com/
 mongodb+srv://admin:<password>@cluster0.zgjyqfq.mongodb.net/?retryWrites=true&w=majority
 
 
+http://localhost:5000/api/user
+
+
+
+No Postman
+  usar GET para http://localhost:5000/api/user e clicar em SEND
+  ir em -> Body -> Pretty:
+  """
+  {
+    "users": []
+  }
+  """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
