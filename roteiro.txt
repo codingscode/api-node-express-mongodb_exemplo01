@@ -17,7 +17,7 @@ na pasta backend:
    [nodemon] clean exit - waiting for changes before restart
 
    ```
-
+   npm i express
 
 
 
