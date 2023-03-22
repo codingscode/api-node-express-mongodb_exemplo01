@@ -1,9 +1,8 @@
 
 
-https://github.com/manualdodev/todolist-fullstack
-
-
-
+na pasta backend:
+   npm init
+   npm i nodemon
 
 
 
