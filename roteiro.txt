@@ -3,9 +3,20 @@
 na pasta backend:
    npm init
    npm i nodemon
+   npm start
+   ```
+   > backend@1.0.0 start
+   > nodemon app.js
 
+   [nodemon] 2.0.21
+   [nodemon] to restart at any time, enter `rs`
+   [nodemon] watching path(s): *.*
+   [nodemon] watching extensions: js,mjs,json
+   [nodemon] starting `node app.js`
+   olá mundo
+   [nodemon] clean exit - waiting for changes before restart
 
-
+   ```
 
 
 
