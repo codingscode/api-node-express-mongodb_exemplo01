@@ -1,11 +1,13 @@
 
 import express, { application } from 'express'
-import { getAllUser } from '../controllers/user-controller'
+import { getAllUser, signup } from '../controllers/user-controller'
 
 
 const router = express.Router()
 
 
 router.get('/', getAllUser)
+router.post('/signup', signup)
+
 export default router
 
