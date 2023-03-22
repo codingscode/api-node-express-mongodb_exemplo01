@@ -18,15 +18,15 @@ na pasta backend:
 
    ```
    npm i express
-
+   npm i mongoose
 
 
 ver http://localhost:5000/api
 
+https://www.mongodb.com/
 
 
-
-
+mongodb+srv://admin:<password>@cluster0.zgjyqfq.mongodb.net/?retryWrites=true&w=majority
 
 
 
