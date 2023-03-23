@@ -34,7 +34,7 @@ http://localhost:5000/api/user
 
 
 No Postman
-  usar GET para http://localhost:5000/api/user e clicar em SEND  [retestar]
+  usar GET para http://localhost:5000/api/user e clicar em SEND 
   ir em -> Body -> Pretty:
   """
   {
@@ -81,6 +81,30 @@ No Postman
                "__v": 0
            }
        }
+
+  usar POST para http://localhost:5000/api/user/login  clicar em SEND
+    em Body -> raw (como json) digitar
+     {
+        "email": "ferdinand@gmail.com",
+        "password": "8881234"
+     }
+
+     mais em baixo em Body -> Pretty aparece:
+     {
+        "message": "Não se pode encontrar Usuário por este email!"
+     }
+
+     **** se:
+     {
+        "email": "lala@gmail.com",
+        "password": "9991234"
+     }
+     aparece:
+     {
+        "message": "Login com sucesso!"
+     }
+
+
 
 
 
