@@ -105,6 +105,17 @@ No Postman
      }
 
 
+  usar GET para http://localhost:5000/api/blog/  clicar em SEND
+  ir em -> Body -> Pretty: aparece
+  """
+   {
+      "blogs": []
+   }
+  """
+    
+
+
+
 
 
 
