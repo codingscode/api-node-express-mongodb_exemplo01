@@ -241,9 +241,22 @@ No Postman
       }
 
 
+  usar DELETE para http://localhost:5000/api/blog/641da7112efd421b89f946f4  clicar em SEND
+    em Params:
+   
+    em Body -> Pretty:
+      {
+          "message": "Deletado com sucesso!"
+      }
 
 
-
+  usar GET para http://localhost:5000/api/blog/641da7112efd421b89f946f4  clicar em SEND
+    em Params:
+   
+    em Body -> Pretty:
+      {
+          "message": "Nenhum Blog encontrado"
+      }
 
 
 

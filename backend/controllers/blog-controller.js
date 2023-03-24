@@ -69,6 +69,40 @@ export const getById = async (req, res, next) => {
 }
 
 
+export const deleteBlog = async (req, res, next) => {
+   const id = req.params.id
+   
+   let blog
+   
+   try {
+      blog = await Blog.findByIdAndRemove(id)
+   }
+   catch (err) {
+      console.log(err)
+   }
+   if (!blog) {
+      return res.status(500).json({message: 'Inapito para deletar'})
+   }
+
+   return res.status(200).json({message: 'Deletado com sucesso!'})
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
