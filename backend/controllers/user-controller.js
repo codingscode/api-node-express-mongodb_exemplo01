@@ -37,7 +37,7 @@ export const signup = async (req, res, next) => {
    const hashedPassword = bcrypt.hashSync(password)
    
    const user = new User({
-      name, email, password: hashedPassword
+      name, email, password: hashedPassword, blogs: []
    })
 
    
@@ -73,22 +73,6 @@ export const login = async (req, res, next) => {
 
    return res.status(200).json({message: 'Login com sucesso!'})
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
