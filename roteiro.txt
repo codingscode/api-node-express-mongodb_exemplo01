@@ -105,15 +105,29 @@ No Postman
      }
 
 
-  usar GET para http://localhost:5000/api/blog/  clicar em SEND
+  usar GET para http://localhost:5000/api/blog/  clicar em SEND   [testar e ver]
   ir em -> Body -> Pretty: aparece
   """
    {
       "blogs": []
    }
   """
+   {
+       "blogs": [
+           {
+               "_id": "641cf7a45015903596823957",
+               "title": "Blog atualizado",
+               "description": "Isto é meu primeiro Blog atualizado",
+               "image": "xxxx",
+               "user": "12345",
+               "__v": 0
+           }
+       ]
+   }
+
+
     
-  usar POST para http://localhost:5000/api/blog/add  clicar em SEND
+  usar POST para http://localhost:5000/api/blog/add  clicar em SEND     [pegar o valor de _id]
     em Body -> raw (como json) digitar
    {
       "title": "Meu novo Blog",
@@ -132,6 +146,63 @@ No Postman
             "__v": 0
         }
     }
+  usar PUT para http://localhost:5000/api/blog/add  clicar em SEND
+    em Body -> raw (como json) digitar
+   {
+      "title": "Blog atualizado",
+      "description": "Isto é meu primeiro Blog atualizado"
+   }
+     mais em baixo em Body -> Pretty aparece:
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>SyntaxError: Unexpected token } in JSON at position 92<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at parse (/home/misterhp/Programacao/FeitosAParte/004/backend/node_modules/body-parser/lib/types/json.js:89:19)<br> &nbsp; &nbsp;at /home/misterhp/Programacao/FeitosAParte/004/backend/node_modules/body-parser/lib/read.js:128:18<br> &nbsp; &nbsp;at AsyncResource.runInAsyncScope (node:async_hooks:203:9)<br> &nbsp; &nbsp;at invokeCallback (/home/misterhp/Programacao/FeitosAParte/004/backend/node_modules/raw-body/index.js:231:16)<br> &nbsp; &nbsp;at done (/home/misterhp/Programacao/FeitosAParte/004/backend/node_modules/raw-body/index.js:220:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (/home/misterhp/Programacao/FeitosAParte/004/backend/node_modules/raw-body/index.js:280:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (node:events:525:35)<br> &nbsp; &nbsp;at endReadableNT (node:internal/streams/readable:1358:12)<br> &nbsp; &nbsp;at processTicksAndRejections (node:internal/process/task_queues:83:21)</pre>
+    </body>
+    </html>
+
+  usar PUT para http://localhost:5000/api/blog/update/641cf7a45015903596823957  clicar em SEND
+   {
+      "title": "Blog atualizado",
+      "description": "Isto é meu primeiro Blog atualizado"
+   }
+     mais em baixo em Body -> Pretty aparece:
+   {
+       "blog": {
+           "_id": "641cf7a45015903596823957",
+           "title": "Meu novo Blog",
+           "description": "Isto é meu primeiro Blog",
+           "image": "xxxx",
+           "user": "12345",
+           "__v": 0
+       }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
