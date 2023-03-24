@@ -225,10 +225,23 @@ No Postman
        }
 
 
+  usar GET para http://localhost:5000/api/blog/641da7112efd421b89f946f4  clicar em SEND
+    em Params:
+   
+    em Body -> Pretty:
+      {
+          "blog": {
+              "_id": "641da7112efd421b89f946f4",
+              "title": "Meu segundo novo Blog",
+              "description": "Isto é meu segundo Blog",
+              "image": "xxxx",
+              "user": "12345",
+              "__v": 0
+          }
+      }
 
 
 
-641da7112efd421b89f946f4
 
 
 
