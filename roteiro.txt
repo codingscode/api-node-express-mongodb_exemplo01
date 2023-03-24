@@ -259,6 +259,27 @@ No Postman
       }
 
 
+  usar POST para http://localhost:5000/api/user/signup  clicar em SEND
+    em Body -> raw Json:
+     {
+        "name": "Paulo",
+        "email": "paulo@gmail.com",
+        "password": "987654"
+     }
+  
+    em Body -> Pretty:
+     {
+         "user": {
+             "name": "Paulo",
+             "email": "paulo@gmail.com",
+             "password": "$2a$10$Tq/jjrakRx8aT04PdoGUqevFikcFA3UqtkQCrmZDz8WlHODOgDlDq",
+             "blogs": [],
+             "_id": "641db1a07930744d11aeb1d0",
+             "__v": 0
+         }
+     }
+
+
 
 
 
