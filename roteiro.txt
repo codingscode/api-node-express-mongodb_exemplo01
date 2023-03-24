@@ -113,10 +113,33 @@ No Postman
    }
   """
     
+  usar POST para http://localhost:5000/api/blog/add  clicar em SEND
+    em Body -> raw (como json) digitar
+   {
+      "title": "Meu novo Blog",
+      "description": "Isto é meu primeiro Blog",
+      "image": "xxxx",
+      "user": "12345"
+   }
+     mais em baixo em Body -> Pretty aparece:
+    {
+        "blog": {
+            "title": "Meu novo Blog",
+            "description": "Isto é meu primeiro Blog",
+            "image": "xxxx",
+            "user": "12345",
+            "_id": "641cf7a45015903596823957",
+            "__v": 0
+        }
+    }
 
 
 
 
+
+
+
+http://localhost:5000/api/blog/add
 
 
 
