@@ -281,6 +281,74 @@ No Postman
 
 
 
+primeiro 
+  usar GET para http://localhost:5000/api/user  clicar em SEND
+    
+    em Body -> Pretty:
+       pegar o valor de _id do enesimo no array
+           "_id": "641b1110372e4e78e2e84eba",
+
+
+
+  usar POST para http://localhost:5000/api/blog/add  clicar em SEND
+    em Body -> raw Json:
+      {
+         "title": "Meu segundo novo Blog",
+         "description": "Isto é meu segundo Blog",
+         "image": "xxxx",
+         "user": "641b1110372e4e78e2e84eba"
+      }
+  
+    em Body -> Pretty:
+      {
+          "blog": {
+              "title": "Meu segundo novo Blog",
+              "description": "Isto é meu segundo Blog",
+              "image": "xxxx",
+              "user": "641b1110372e4e78e2e84eba",
+              "_id": "641f06131a12eddd739cb0f5",
+              "__v": 0
+          }
+      }
+
+  depois
+  usar GET para http://localhost:5000/api/user  clicar em SEND
+    
+    em Body -> Pretty:
+    """
+      {
+          "users": [
+              {
+                  "_id": "641b1110372e4e78e2e84eba",
+                  "name": "Nick",
+                  "email": "nick@gmail.com",
+                  "password": "111111",
+                  "__v": 1,
+                  "blogs": [
+                      "641f06131a12eddd739cb0f5"
+                  ]
+              },
+              {
+                  "blogs": [],
+                  "_id": "641b14ba79428e0bb5695848",
+                  "name": "Larissa",
+                  "email": "lala@gmail.com",
+                  "password": "$2a$10$1JC0HF5SkhpIdgnA1gVts./humjA/F286b2VdOge76q/9aLrBEBQG",
+                  "__v": 0
+              },
+              {
+                  "_id": "641db1a07930744d11aeb1d0",
+                  "name": "Paulo",
+                  "email": "paulo@gmail.com",
+                  "password": "$2a$10$Tq/jjrakRx8aT04PdoGUqevFikcFA3UqtkQCrmZDz8WlHODOgDlDq",
+                  "blogs": [],
+                  "__v": 0
+              }
+          ]
+      }
+    """
+
+ 
 
 
 
@@ -307,12 +375,9 @@ No Postman
 
 
 
-http://localhost:5000/api/blog/add
 
 
 
-
-http://localhost:5000/api/user/signup
 
 
 npm i bcryptjs
