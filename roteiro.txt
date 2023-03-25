@@ -356,7 +356,7 @@ primeiro
           "message": "Deletado com sucesso!"
       }
 
-  usar GET para http://localhost:5000/api/user  clicar em SEND
+  usar GET para http://localhost:5000/api/user  clicar em SEND  [novamente]
     
     em Body -> Pretty:
 """
@@ -391,13 +391,86 @@ primeiro
 """
 
 
+  usar POST para http://localhost:5000/api/blog/add  clicar em SEND
+    em Body -> raw Json:
+      {
+         "title": "Blog de Nick",
+         "description": "Isto é meu outro Blog",
+         "image": "xxxx",
+         "user": "641b1110372e4e78e2e84eba"
+      }
+  
+    em Body -> Pretty:
+      {
+          "blog": {
+              "title": "Blog de Nick",
+              "description": "Isto é meu outro Blog",
+              "image": "xxxx",
+              "user": "641b1110372e4e78e2e84eba",
+              "_id": "641f13375fc63d75d66508e9",
+              "__v": 0
+          }
+      }
+
+  usar GET para http://localhost:5000/api/user  clicar em SEND  [novamente]
+    
+    em Body -> Pretty:
+     {
+         "users": [
+             {
+                 "_id": "641b1110372e4e78e2e84eba",
+                 "name": "Nick",
+                 "email": "nick@gmail.com",
+                 "password": "111111",
+                 "__v": 3,
+                 "blogs": [
+                     "641f13375fc63d75d66508e9"        <- aparece
+                 ]
+             },
+             {
+                 "blogs": [],
+                 "_id": "641b14ba79428e0bb5695848",
+                 "name": "Larissa",
+                 "email": "lala@gmail.com",
+                 "password": "$2a$10$1JC0HF5SkhpIdgnA1gVts./humjA/F286b2VdOge76q/9aLrBEBQG",
+                 "__v": 0
+             },
+             {
+                 "_id": "641db1a07930744d11aeb1d0",
+                 "name": "Paulo",
+                 "email": "paulo@gmail.com",
+                 "password": "$2a$10$Tq/jjrakRx8aT04PdoGUqevFikcFA3UqtkQCrmZDz8WlHODOgDlDq",
+                 "blogs": [],
+                 "__v": 0
+             }
+         ]
+     }
+
+pegar o valor de _id 641b1110372e4e78e2e84eba
 
 
-
-
-
-
-
+  usar GET para http://localhost:5000/api/blog/user/641b1110372e4e78e2e84eba  clicar em SEND  [novamente]
+    
+    em Body -> Pretty:
+{
+    "blogs": {
+        "_id": "641b1110372e4e78e2e84eba",
+        "name": "Nick",
+        "email": "nick@gmail.com",
+        "password": "111111",
+        "__v": 3,
+        "blogs": [
+            {
+                "_id": "641f13375fc63d75d66508e9",
+                "title": "Blog de Nick",
+                "description": "Isto é meu outro Blog",
+                "image": "xxxx",
+                "user": "641b1110372e4e78e2e84eba",
+                "__v": 0
+            }
+        ]
+    }
+}
 
 
 
