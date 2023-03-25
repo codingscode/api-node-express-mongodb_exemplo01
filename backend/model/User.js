@@ -14,7 +14,9 @@ const userSchema = new Schema({
    password: {
       type: String, required: true, minlength: 6
    },
-   blogs: [ { type: mongoose.Types.ObjectId, ref: 'Blog', required: true } ]
+   blogs:  [{
+      type: mongoose.Types.ObjectId, ref: 'Blog', required: true
+   }]
 
 })
 
